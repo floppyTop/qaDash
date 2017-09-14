@@ -1,0 +1,21 @@
+* {
+	box-sizing: border-box;
+}
+
+.sidebar {
+	background: #eee;
+	width: 300px;
+	min-height: 600px;
+	padding: 1em;
+}
+
+form input, form select, textarea {
+	display: block;
+	padding: .8em .3em;
+	margin: .5em auto;
+	width: 100%;
+}
+
+textarea {
+	resize: vertical;
+}
