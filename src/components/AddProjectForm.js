@@ -78,9 +78,9 @@ class AddProjectForm extends React.Component {
 						ref={(input) => this.product = input}
 						defaultValue="Select Product Type"
 					>
-						<option value="mdavis">Michael Davis</option>
-						<option value="tgarbutt">Tanner Garbutt</option>
-						<option value="cprizzia">Charles Prizzia</option>
+						<option value="responsive_basic">Responsive Basic</option>
+						<option value="responsive_plus">Responsive Plus</option>
+						<option value="ecomm_plus">eCommerce Plus</option>
 					</select>
 					<textarea
 						ref={(input) => this.description = input}
@@ -92,7 +92,7 @@ class AddProjectForm extends React.Component {
 					</form>
 				</div>
 			</ReactModal>
-			</div>)
+			</div>) 
     }
 }
 export default AddProjectForm;
