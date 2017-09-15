@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from '../logo.svg';
 import LeftSidebar from './LeftSidebar';
+
 class App extends React.Component {
   constructor() {
     super();

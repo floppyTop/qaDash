@@ -1,5 +1,6 @@
 import React from 'react';
 import AddProjectForm from './AddProjectForm';
+import ReactModal from 'react-modal';
 import '../css/LeftSidebar.scss';
 
 class LeftSidebar extends React.Component {

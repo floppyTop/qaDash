@@ -41,6 +41,7 @@
     "react-bootstrap-table": "^4.0.3",
     "react-dev-utils": "^4.0.1",
     "react-dom": "^15.6.1",
+    "react-modal": "^2.3.2",
     "s": "^0.1.1",
     "save-dev": "^2.0.0",
     "style-loader": "0.18.2",
