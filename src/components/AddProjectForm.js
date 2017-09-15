@@ -1,62 +1,51 @@
 import React from 'react';
 import ReactModal from 'react-modal';
-
-	const customStyles = {
-		 content : {
-		    top                   : '50%',
-		    left                  : '50%',
-		    right                 : 'auto',
-		    bottom                : 'auto',
-		    marginRight           : '-50%',
-		    transform             : 'translate(-50%, -50%)'
-		 }
-	}
-
+const customStyles = {
+    content: {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)'
+    }
+}
 class AddProjectForm extends React.Component {
-
-	constructor() {
-		super();
-
-		this.state = {
-		   modalIsOpen: false
-		 };
-
-		this.openModal = this.openModal.bind(this);
-	    this.afterOpenModal = this.afterOpenModal.bind(this);
-	    this.closeModal = this.closeModal.bind(this);
-		}
-
-	createProject(event) {
-		event.preventDefault();
-		console.log('Going to add a project');
-		const project = {
-			name: this.name.value,
-			accountManager: this.accountManager.value,
-			product: this.product.value,
-			description: this.description.value
-		}
-		this.props.addProject(project);
-		this.projectForm.reset();
-		console.log(project);
-	};
-
-	  openModal() {
-	    this.setState({modalIsOpen: true});
-	  }
-
-	  afterOpenModal() {
-	    // references are now sync'd and can be accessed.
-	    this.subtitle.style.color = '#212121';
-	    this.subtitle.style.font='sans-serif';
-	  }
-
-	  closeModal() {
-	    this.setState({modalIsOpen: false});
-	  }
-
-	render() {
-		return (
-			<div>
+    constructor() {
+        super();
+        this.state = {
+            modalIsOpen: false
+        };
+        this.openModal = this.openModal.bind(this);
+        this.afterOpenModal = this.afterOpenModal.bind(this);
+        this.closeModal = this.closeModal.bind(this);
+    }
+    createProject(event) {
+        event.preventDefault();
+        console.log('Going to add a project');
+        const project = {
+            name: this.name.value,
+            accountManager: this.accountManager.value,
+            product: this.product.value,
+            description: this.description.value
+        }
+        this.props.addProject(project);
+        this.projectForm.reset();
+        console.log(project);
+    };
+    openModal() {
+        this.setState({ modalIsOpen: true });
+    }
+    afterOpenModal() {
+        // references are now sync'd and can be accessed.
+        this.subtitle.style.color = '#212121';
+        this.subtitle.style.font = 'sans-serif';
+    }
+    closeModal() {
+        this.setState({ modalIsOpen: false });
+    }
+    render() {
+        return (<div>
 				<button onClick={this.openModal}>Add Project</button>
 			<ReactModal
 	          isOpen={this.state.modalIsOpen}
@@ -103,9 +92,7 @@ class AddProjectForm extends React.Component {
 					</form>
 				</div>
 			</ReactModal>
-			</div>
-		)
-	}
+			</div>)
+    }
 }
-
 export default AddProjectForm;
